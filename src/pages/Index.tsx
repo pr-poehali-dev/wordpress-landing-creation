@@ -27,7 +27,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white animate-fade-in">
+      <section id="home" className="bg-gradient-to-br from-primary via-secondary to-accent text-white animate-fade-in rounded-none py-20">
         <div className="container mx-auto px-4 text-center animate-scale-in">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 leading-tight">
             Создаем сайты на
