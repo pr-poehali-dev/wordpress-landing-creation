@@ -230,6 +230,175 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-4">
+              Тарифы и цены
+            </h2>
+            <p className="text-xl opacity-90 font-open-sans max-w-3xl mx-auto">
+              Прозрачные цены без скрытых платежей. Выберите тариф, который подходит именно вашему бизнесу.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Basic Plan */}
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/15 transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Globe" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold">Базовый</CardTitle>
+                <CardDescription className="text-white/80 font-open-sans">
+                  Идеально для небольших проектов
+                </CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-montserrat font-bold">₽15,000</span>
+                  <span className="text-white/60 font-open-sans ml-2">за проект</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
+                    <span className="font-open-sans">До 5 страниц</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Адаптивный дизайн</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Базовый SEO</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Форма обратной связи</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
+                    <span className="font-open-sans">1 месяц поддержки</span>
+                  </div>
+                </div>
+                <Button className="w-full bg-accent hover:bg-accent/80 text-white font-montserrat font-semibold mt-6">
+                  Выбрать тариф
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Pro Plan */}
+            <Card className="bg-gradient-to-br from-primary to-secondary text-white border-2 border-gold relative overflow-hidden transform hover:scale-105 transition-all duration-300">
+              <div className="absolute top-0 right-0 bg-gold text-gray-900 px-4 py-2 text-sm font-montserrat font-bold">
+                Популярный
+              </div>
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Star" className="text-gold" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold">Профессиональный</CardTitle>
+                <CardDescription className="text-white/90 font-open-sans">
+                  Лучший выбор для бизнеса
+                </CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-montserrat font-bold">₽35,000</span>
+                  <span className="text-white/80 font-open-sans ml-2">за проект</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">До 15 страниц</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Уникальный дизайн</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Полноценный SEO</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Интеграция с CRM</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Аналитика и метрики</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">3 месяца поддержки</span>
+                  </div>
+                </div>
+                <Button className="w-full bg-gold hover:bg-gold/80 text-gray-900 font-montserrat font-semibold mt-6">
+                  Выбрать тариф
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Plan */}
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/15 transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-gold to-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Icon name="Crown" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold">Корпоративный</CardTitle>
+                <CardDescription className="text-white/80 font-open-sans">
+                  Для крупных проектов
+                </CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-montserrat font-bold">₽75,000</span>
+                  <span className="text-white/60 font-open-sans ml-2">за проект</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Неограниченно страниц</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Эксклюзивный дизайн</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Продвинутый SEO</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Интернет-магазин</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">Многоязычность</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
+                    <span className="font-open-sans">6 месяцев поддержки</span>
+                  </div>
+                </div>
+                <Button className="w-full bg-gold hover:bg-gold/80 text-gray-900 font-montserrat font-semibold mt-6">
+                  Выбрать тариф
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-white/80 font-open-sans mb-4">
+              Нужен индивидуальный проект? Обсудим ваши требования лично.
+            </p>
+            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 font-montserrat font-semibold">
+              <Icon name="Phone" className="mr-2" size={20} />
+              Получить консультацию
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
