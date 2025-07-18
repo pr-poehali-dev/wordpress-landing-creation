@@ -230,6 +230,219 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-4 text-gray-900">
+              О нас
+            </h2>
+            <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
+              Мы — команда экспертов с 8-летним опытом разработки на WordPress. 
+              Создаем сайты, которые работают на результат вашего бизнеса.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+              <h3 className="text-3xl font-montserrat font-bold mb-6 text-gray-900">
+                Почему выбирают нас?
+              </h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                    <Icon name="Zap" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-montserrat font-semibold mb-2 text-gray-900">
+                      Быстрая разработка
+                    </h4>
+                    <p className="text-gray-600 font-open-sans">
+                      Средний срок создания сайта — 7-14 дней. Используем готовые решения и проверенные технологии.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+                    <Icon name="Shield" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-montserrat font-semibold mb-2 text-gray-900">
+                      Гарантия качества
+                    </h4>
+                    <p className="text-gray-600 font-open-sans">
+                      Предоставляем 6 месяцев технической поддержки. Все сайты проходят тестирование на безопасность.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                    <Icon name="Users" className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-montserrat font-semibold mb-2 text-gray-900">
+                      Персональный подход
+                    </h4>
+                    <p className="text-gray-600 font-open-sans">
+                      За каждым проектом закреплен менеджер. Регулярно отчитываемся о ходе работ.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
+              <div className="grid grid-cols-2 gap-8">
+                <div className="text-center group cursor-pointer">
+                  <div className="text-4xl font-montserrat font-bold text-primary mb-2 group-hover:scale-110 transition-transform animate-pulse">150+</div>
+                  <p className="text-gray-600 font-open-sans">Проектов завершено</p>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-4xl font-montserrat font-bold text-secondary mb-2 group-hover:scale-110 transition-transform animate-pulse">8</div>
+                  <p className="text-gray-600 font-open-sans">Лет опыта</p>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-4xl font-montserrat font-bold text-accent mb-2 group-hover:scale-110 transition-transform animate-pulse">98%</div>
+                  <p className="text-gray-600 font-open-sans">Довольных клиентов</p>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-4xl font-montserrat font-bold text-gold mb-2 group-hover:scale-110 transition-transform animate-pulse">24/7</div>
+                  <p className="text-gray-600 font-open-sans">Поддержка</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-3xl font-montserrat font-bold mb-8 text-gray-900">
+              Наша команда
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center group">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <Icon name="User" className="text-white" size={48} />
+                </div>
+                <h4 className="text-xl font-montserrat font-semibold mb-2 text-gray-900">Алексей Иванов</h4>
+                <p className="text-gray-600 font-open-sans mb-2">Lead Developer</p>
+                <p className="text-sm text-gray-500 font-open-sans">5+ лет с WordPress, 50+ проектов</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-32 h-32 bg-gradient-to-br from-secondary to-accent rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <Icon name="User" className="text-white" size={48} />
+                </div>
+                <h4 className="text-xl font-montserrat font-semibold mb-2 text-gray-900">Мария Петрова</h4>
+                <p className="text-gray-600 font-open-sans mb-2">UI/UX Designer</p>
+                <p className="text-sm text-gray-500 font-open-sans">Создает красивые и удобные интерфейсы</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-32 h-32 bg-gradient-to-br from-accent to-gold rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <Icon name="User" className="text-white" size={48} />
+                </div>
+                <h4 className="text-xl font-montserrat font-semibold mb-2 text-gray-900">Дмитрий Сидоров</h4>
+                <p className="text-gray-600 font-open-sans mb-2">Project Manager</p>
+                <p className="text-sm text-gray-500 font-open-sans">Контролирует сроки и качество</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-4 text-gray-900">
+              Как мы работаем
+            </h2>
+            <p className="text-xl text-gray-600 font-open-sans max-w-3xl mx-auto">
+              Простой и понятный процесс от идеи до запуска. 
+              Вы всегда знаете, на каком этапе находится ваш проект.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Icon name="MessageCircle" className="text-white" size={32} />
+                </div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">1</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-montserrat font-semibold mb-3 text-gray-900">
+                Консультация
+              </h3>
+              <p className="text-gray-600 font-open-sans">
+                Обсуждаем ваши цели, анализируем требования и составляем техническое задание.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-secondary to-accent rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Icon name="Palette" className="text-white" size={32} />
+                </div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">2</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-montserrat font-semibold mb-3 text-gray-900">
+                Дизайн
+              </h3>
+              <p className="text-gray-600 font-open-sans">
+                Создаем макеты страниц, подбираем цвета и шрифты. Согласовываем каждую деталь.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-accent to-gold rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Icon name="Code" className="text-white" size={32} />
+                </div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">3</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-montserrat font-semibold mb-3 text-gray-900">
+                Разработка
+              </h3>
+              <p className="text-gray-600 font-open-sans">
+                Программируем сайт на WordPress, устанавливаем плагины и настраиваем функционал.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-gold to-primary rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Icon name="Rocket" className="text-white" size={32} />
+                </div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">4</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-montserrat font-semibold mb-3 text-gray-900">
+                Запуск
+              </h3>
+              <p className="text-gray-600 font-open-sans">
+                Тестируем сайт, настраиваем хостинг и передаем вам готовый проект с инструкцией.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-montserrat font-semibold px-8 py-3">
+              <Icon name="Calendar" className="mr-2" size={20} />
+              Начать проект
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4">
