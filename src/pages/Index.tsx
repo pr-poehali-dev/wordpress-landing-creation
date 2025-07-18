@@ -1,12 +1,343 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <Icon name="Globe" className="text-primary" size={32} />
+            <span className="text-2xl font-montserrat font-bold text-gray-900">WordPressDev</span>
+          </div>
+          <nav className="hidden md:flex space-x-8">
+            <a href="#home" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Главная</a>
+            <a href="#services" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Услуги</a>
+            <a href="#portfolio" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Портфолио</a>
+            <a href="#contact" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Контакты</a>
+          </nav>
+          <Button className="bg-primary hover:bg-primary/90 text-white font-montserrat">
+            Заказать сайт
+          </Button>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section id="home" className="py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 leading-tight">
+            Создаем сайты на
+            <span className="block bg-gradient-to-r from-gold to-yellow-300 bg-clip-text text-transparent">
+              WordPress
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl font-open-sans mb-8 max-w-3xl mx-auto opacity-90">
+            Профессиональная разработка современных и функциональных сайтов. 
+            От лендингов до интернет-магазинов
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg px-8 py-4">
+              <Icon name="Rocket" className="mr-2" size={20} />
+              Обсудить проект
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-montserrat font-semibold text-lg px-8 py-4">
+              Посмотреть работы
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-gray-900 mb-4">
+              Наши услуги
+            </h2>
+            <p className="text-xl text-gray-600 font-open-sans max-w-2xl mx-auto">
+              Полный спектр услуг по созданию и поддержке сайтов на WordPress
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Layout" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Лендинги</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
+                  Продающие одностраничные сайты с высокой конверсией для вашего бизнеса
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Store" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Интернет-магазины</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
+                  Полнофункциональные магазины на WooCommerce с удобной системой управления
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Building" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Корпоративные сайты</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
+                  Представительские сайты компаний с современным дизайном и функционалом
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-gold to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Zap" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Оптимизация</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
+                  Ускорение загрузки, SEO-оптимизация и настройка безопасности сайта
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Settings" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Поддержка</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
+                  Техническая поддержка, обновления и резервное копирование сайтов
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="Smartphone" className="text-white" size={32} />
+                </div>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Адаптивность</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
+                  Идеальное отображение на всех устройствах: компьютерах, планшетах, телефонах
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-gray-900 mb-4">
+              Портфолио
+            </h2>
+            <p className="text-xl text-gray-600 font-open-sans max-w-2xl mx-auto">
+              Примеры наших работ - от элегантных лендингов до сложных интернет-магазинов
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src="/img/6063f3ea-7053-4514-b68b-d5be9af81d01.jpg" 
+                  alt="Интернет-магазин электроники"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-montserrat font-bold text-gray-900">Магазин электроники</CardTitle>
+                <CardDescription className="font-open-sans text-gray-600">
+                  Интернет-магазин с каталогом товаров, корзиной и системой оплаты
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  Посмотреть проект
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src="/img/5fa2d2f1-294c-4cba-bdaa-9666f5a00040.jpg" 
+                  alt="Корпоративный сайт IT-компании"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-montserrat font-bold text-gray-900">Корпоративный сайт</CardTitle>
+                <CardDescription className="font-open-sans text-gray-600">
+                  Представительский сайт IT-компании с портфолио и формой заявок
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" className="w-full group-hover:bg-secondary group-hover:text-white transition-colors">
+                  Посмотреть проект
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src="/img/3e1c7f41-b7e2-43c6-9c67-ddabb16cb892.jpg" 
+                  alt="Сайт медицинского центра"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-montserrat font-bold text-gray-900">Медицинский центр</CardTitle>
+                <CardDescription className="font-open-sans text-gray-600">
+                  Сайт клиники с записью на прием и каталогом услуг
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-white transition-colors">
+                  Посмотреть проект
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-4">
+              Свяжитесь с нами
+            </h2>
+            <p className="text-xl opacity-90 font-open-sans max-w-2xl mx-auto">
+              Готовы обсудить ваш проект? Оставьте заявку, и мы свяжемся с вами в течение часа
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardHeader>
+                <CardTitle className="text-2xl font-montserrat font-bold text-center text-white">
+                  Форма обратной связи
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-open-sans font-medium mb-2">Ваше имя</label>
+                    <Input 
+                      placeholder="Введите имя" 
+                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-open-sans font-medium mb-2">Телефон</label>
+                    <Input 
+                      placeholder="+7 (999) 123-45-67" 
+                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-open-sans font-medium mb-2">Email</label>
+                  <Input 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-open-sans font-medium mb-2">Описание проекта</label>
+                  <Textarea 
+                    placeholder="Расскажите о вашем проекте..." 
+                    rows={4}
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
+                  />
+                </div>
+                <Button className="w-full bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg py-6">
+                  <Icon name="Send" className="mr-2" size={20} />
+                  Отправить заявку
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <Icon name="Globe" className="text-primary" size={32} />
+                <span className="text-2xl font-montserrat font-bold">WordPressDev</span>
+              </div>
+              <p className="text-gray-400 font-open-sans">
+                Профессиональная разработка сайтов на WordPress. 
+                Создаем современные и функциональные веб-решения.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-montserrat font-bold mb-4">Услуги</h3>
+              <ul className="space-y-2 font-open-sans text-gray-400">
+                <li>Лендинги</li>
+                <li>Интернет-магазины</li>
+                <li>Корпоративные сайты</li>
+                <li>Оптимизация и поддержка</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-montserrat font-bold mb-4">Контакты</h3>
+              <div className="space-y-2 font-open-sans text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Icon name="Phone" size={16} />
+                  <span>+7 (999) 123-45-67</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="Mail" size={16} />
+                  <span>info@wordpressdev.ru</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="MapPin" size={16} />
+                  <span>Москва, Россия</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 font-open-sans">
+            <p>&copy; 2024 WordPressDev. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
