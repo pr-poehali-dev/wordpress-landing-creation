@@ -44,7 +44,7 @@ const Index = () => {
               <Icon name="Rocket" className="mr-2" size={20} />
               Обсудить проект
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-montserrat font-semibold text-lg px-8 py-4">
+            <Button size="lg" variant="outline" className="border-white text-gold hover:bg-white hover:text-primary font-montserrat font-semibold text-lg px-8 py-4">
               Посмотреть работы
             </Button>
           </div>
@@ -391,7 +391,7 @@ const Index = () => {
             <p className="text-white/80 font-open-sans mb-4">
               Нужен индивидуальный проект? Обсудим ваши требования лично.
             </p>
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 font-montserrat font-semibold">
+            <Button variant="outline" className="border-white/30 text-gold hover:bg-white/10 hover:text-gold font-montserrat font-semibold">
               <Icon name="Phone" className="mr-2" size={20} />
               Получить консультацию
             </Button>
