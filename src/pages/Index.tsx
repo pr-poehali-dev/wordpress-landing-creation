@@ -27,8 +27,8 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section id="home" className="py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white animate-fade-in">
+        <div className="container mx-auto px-4 text-center animate-scale-in">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 leading-tight">
             Создаем сайты на
             <span className="block bg-gradient-to-r from-gold to-yellow-300 bg-clip-text text-transparent">
@@ -52,9 +52,9 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-gray-50 animate-fade-in">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-gray-900 mb-4">
               Наши услуги
             </h2>
@@ -78,7 +78,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white animate-scale-in" style={{animationDelay: '0.1s'}}>
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Store" className="text-white" size={32} />
@@ -92,7 +92,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white animate-scale-in" style={{animationDelay: '0.2s'}}>
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Building" className="text-white" size={32} />
@@ -106,7 +106,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white animate-scale-in" style={{animationDelay: '0.3s'}}>
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-gold to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Zap" className="text-white" size={32} />
@@ -120,7 +120,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white animate-scale-in" style={{animationDelay: '0.4s'}}>
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Settings" className="text-white" size={32} />
@@ -134,7 +134,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white animate-scale-in" style={{animationDelay: '0.5s'}}>
               <CardHeader className="text-center pb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Smartphone" className="text-white" size={32} />
