@@ -122,6 +122,9 @@ const Services = () => {
               <Link to="/services" className="text-primary font-medium font-open-sans">
                 Услуги
               </Link>
+              <Link to="/about" className="text-gray-600 hover:text-primary transition-colors font-open-sans">
+                О нас
+              </Link>
             </nav>
           </div>
         </div>

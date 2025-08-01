@@ -18,6 +18,7 @@ const Index = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Главная</a>
             <Link to="/services" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Услуги</Link>
+            <Link to="/about" className="font-open-sans text-gray-600 hover:text-primary transition-colors">О нас</Link>
             <a href="#portfolio" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Портфолио</a>
             <a href="#contact" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Контакты</a>
           </nav>
