@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -16,7 +17,7 @@ const Index = () => {
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Главная</a>
-            <a href="#services" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Услуги</a>
+            <Link to="/services" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Услуги</Link>
             <a href="#portfolio" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Портфолио</a>
             <a href="#contact" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Контакты</a>
           </nav>
@@ -75,6 +76,13 @@ const Index = () => {
                 <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
                   Продающие одностраничные сайты с высокой конверсией для вашего бизнеса
                 </CardDescription>
+                <div className="mt-4 text-center">
+                  <Link to="/services">
+                    <Button variant="outline" className="hover:bg-primary hover:text-white transition-colors">
+                      Подробнее
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
