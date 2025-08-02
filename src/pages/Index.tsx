@@ -12,8 +12,10 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Icon name="Globe" className="text-primary" size={32} />
-            <span className="text-2xl font-montserrat font-bold text-gray-900">WordPressDev</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+              <Icon name="Rocket" className="text-white" size={20} />
+            </div>
+            <span className="text-2xl font-montserrat font-bold text-gray-900">WebCraft</span>
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Главная</a>
@@ -32,14 +34,15 @@ const Index = () => {
       <section id="home" className="bg-gradient-to-br from-primary via-secondary to-accent text-white animate-fade-in rounded-none py-20">
         <div className="container mx-auto px-4 text-center animate-scale-in">
           <h1 className="text-5xl md:text-6xl font-montserrat font-bold mb-6 leading-tight">
-            Создаем сайты на
+            Создаем
             <span className="block bg-gradient-to-r from-gold to-yellow-300 bg-clip-text text-transparent">
-              WordPress
+              веб-приложения
             </span>
+            будущего
           </h1>
           <p className="text-xl md:text-2xl font-open-sans mb-8 max-w-3xl mx-auto opacity-90">
-            Профессиональная разработка современных и функциональных сайтов. 
-            От лендингов до интернет-магазинов
+            Современные веб-приложения на React и TypeScript. 
+            От лендингов до сложных SPA
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg px-8 py-4">
@@ -61,7 +64,7 @@ const Index = () => {
               Наши услуги
             </h2>
             <p className="text-xl text-gray-600 font-open-sans max-w-2xl mx-auto">
-              Полный спектр услуг по созданию и поддержке сайтов на WordPress
+              Полный спектр услуг по созданию современных веб-приложений
             </p>
           </div>
           
@@ -75,7 +78,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
-                  Продающие одностраничные сайты с высокой конверсией для вашего бизнеса
+                  Быстрые и эффективные landing page с современными анимациями
                 </CardDescription>
                 <div className="mt-4 text-center">
                   <Link to="/services">
@@ -92,11 +95,11 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Store" className="text-white" size={32} />
                 </div>
-                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Интернет-магазины</CardTitle>
+                <CardTitle className="text-2xl font-montserrat font-bold text-gray-900">Веб-приложения</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
-                  Полнофункциональные магазины на WooCommerce с удобной системой управления
+                  Интерактивные SPA с современным интерфейсом и API интеграциями
                 </CardDescription>
               </CardContent>
             </Card>
@@ -110,7 +113,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 font-open-sans text-center text-lg">
-                  Представительские сайты компаний с современным дизайном и функционалом
+                  Многостраничные сайты с CMS, блогами и интеграциями
                 </CardDescription>
               </CardContent>
             </Card>
@@ -247,7 +250,7 @@ const Index = () => {
               Тарифы и цены
             </h2>
             <p className="text-xl opacity-90 font-open-sans max-w-3xl mx-auto">
-              Прозрачные цены без скрытых платежей. Выберите тариф, который подходит именно вашему бизнесу.
+              Честные цены на качественную разработку. Выберите тариф под ваши задачи.
             </p>
           </div>
 
@@ -258,12 +261,12 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Icon name="Globe" className="text-white" size={32} />
                 </div>
-                <CardTitle className="text-2xl font-montserrat font-bold">Базовый</CardTitle>
+                <CardTitle className="text-2xl font-montserrat font-bold">Лендинг</CardTitle>
                 <CardDescription className="text-white/80 font-open-sans">
-                  Идеально для небольших проектов
+                  Одностраничный сайт с современным дизайном
                 </CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-montserrat font-bold">₽15,000</span>
+                  <span className="text-4xl font-montserrat font-bold">₽25,000</span>
                   <span className="text-white/60 font-open-sans ml-2">за проект</span>
                 </div>
               </CardHeader>
@@ -271,23 +274,23 @@ const Index = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">До 5 страниц</span>
+                    <span className="font-open-sans">Responsive дизайн</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Адаптивный дизайн</span>
+                    <span className="font-open-sans">Анимации и переходы</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Базовый SEO</span>
+                    <span className="font-open-sans">Формы с валидацией</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Форма обратной связи</span>
+                    <span className="font-open-sans">SEO оптимизация</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">1 месяц поддержки</span>
+                    <span className="font-open-sans">Срок: 7 дней</span>
                   </div>
                 </div>
                 <Button className="w-full bg-accent hover:bg-accent/80 text-white font-montserrat font-semibold mt-6">
@@ -305,12 +308,12 @@ const Index = () => {
                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Icon name="Star" className="text-gold" size={32} />
                 </div>
-                <CardTitle className="text-2xl font-montserrat font-bold">Профессиональный</CardTitle>
+                <CardTitle className="text-2xl font-montserrat font-bold">Многостраничный</CardTitle>
                 <CardDescription className="text-white/90 font-open-sans">
-                  Лучший выбор для бизнеса
+                  Сайт с несколькими разделами
                 </CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-montserrat font-bold">₽35,000</span>
+                  <span className="text-4xl font-montserrat font-bold">₽45,000</span>
                   <span className="text-white/80 font-open-sans ml-2">за проект</span>
                 </div>
               </CardHeader>
@@ -318,27 +321,27 @@ const Index = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">До 15 страниц</span>
+                    <span className="font-open-sans">5-10 страниц/разделов</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Уникальный дизайн</span>
+                    <span className="font-open-sans">React Router навигация</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Полноценный SEO</span>
+                    <span className="font-open-sans">Компонентная архитектура</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Интеграция с CRM</span>
+                    <span className="font-open-sans">State management</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Аналитика и метрики</span>
+                    <span className="font-open-sans">API интеграции</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">3 месяца поддержки</span>
+                    <span className="font-open-sans">Срок: 14 дней</span>
                   </div>
                 </div>
                 <Button className="w-full bg-gold hover:bg-gold/80 text-gray-900 font-montserrat font-semibold mt-6">
@@ -353,12 +356,12 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-gold to-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Icon name="Crown" className="text-white" size={32} />
                 </div>
-                <CardTitle className="text-2xl font-montserrat font-bold">Корпоративный</CardTitle>
+                <CardTitle className="text-2xl font-montserrat font-bold">Веб-приложение</CardTitle>
                 <CardDescription className="text-white/80 font-open-sans">
-                  Для крупных проектов
+                  Полнофункциональная SPA
                 </CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-montserrat font-bold">₽75,000</span>
+                  <span className="text-4xl font-montserrat font-bold">₽85,000</span>
                   <span className="text-white/60 font-open-sans ml-2">за проект</span>
                 </div>
               </CardHeader>
@@ -366,27 +369,27 @@ const Index = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Неограниченно страниц</span>
+                    <span className="font-open-sans">Complex UI/UX</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Эксклюзивный дизайн</span>
+                    <span className="font-open-sans">База данных (Backend)</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Продвинутый SEO</span>
+                    <span className="font-open-sans">Аутентификация</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Интернет-магазин</span>
+                    <span className="font-open-sans">Real-time функции</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Многоязычность</span>
+                    <span className="font-open-sans">Тестирование</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">6 месяцев поддержки</span>
+                    <span className="font-open-sans">Срок: 21 день</span>
                   </div>
                 </div>
                 <Button className="w-full bg-gold hover:bg-gold/80 text-gray-900 font-montserrat font-semibold mt-6">
@@ -398,7 +401,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <p className="text-white/80 font-open-sans mb-4">
-              Нужен индивидуальный проект? Обсудим ваши требования лично.
+              Особые требования к проекту? Мы создадим индивидуальное решение.
             </p>
             <Button variant="outline" className="border-white/30 text-gold hover:bg-white/10 hover:text-gold font-montserrat font-semibold">
               <Icon name="Phone" className="mr-2" size={20} />
@@ -689,19 +692,21 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Globe" className="text-primary" size={32} />
-                <span className="text-2xl font-montserrat font-bold">WordPressDev</span>
+                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                  <Icon name="Rocket" className="text-white" size={20} />
+                </div>
+                <span className="text-2xl font-montserrat font-bold">WebCraft</span>
               </div>
               <p className="text-gray-400 font-open-sans">
-                Профессиональная разработка сайтов на WordPress. 
-                Создаем современные и функциональные веб-решения.
+                Профессиональная разработка веб-приложений. 
+                Современные решения на React и TypeScript.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-montserrat font-bold mb-4">Услуги</h3>
               <ul className="space-y-2 font-open-sans text-gray-400">
                 <li>Лендинги</li>
-                <li>Интернет-магазины</li>
+                <li>Веб-приложения</li>
                 <li>Корпоративные сайты</li>
                 <li>Оптимизация и поддержка</li>
               </ul>
@@ -715,7 +720,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Icon name="Mail" size={16} />
-                  <span>info@wordpressdev.ru</span>
+                  <span>hello@webcraft.dev</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Icon name="MapPin" size={16} />
