@@ -1,9 +1,27 @@
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import ContactModal from '@/components/ContactModal';
 
 const Services = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalConfig, setModalConfig] = useState({
+    title: "Обсудить проект",
+    description: "Расскажите о вашем проекте и мы свяжемся с вами в течение часа",
+    defaultService: ""
+  });
+
+  const openContactModal = (title?: string, description?: string, service?: string) => {
+    setModalConfig({
+      title: title || "Обсудить проект",
+      description: description || "Расскажите о вашем проекте и мы свяжемся с вами в течение часа",
+      defaultService: service || ""
+    });
+    setIsContactModalOpen(true);
+  };
+
   const services = [
     {
       id: 'landing',
@@ -194,6 +212,7 @@ const Services = () => {
 
                   <div className="mt-6 pt-6 border-t border-gray-100">
                     <Button 
+                      onClick={() => openContactModal(`Заказать ${service.title}`, `Обсудим ваш проект по созданию ${service.title.toLowerCase()}`, service.id)}
                       className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
                     >
                       Заказать услугу
@@ -217,7 +236,10 @@ const Services = () => {
             Обсудим ваши задачи и подберем оптимальное решение для вашего бизнеса
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-gray-100 font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Button 
+              onClick={() => openContactModal("Получить консультацию", "Обсудим ваши задачи и подберем оптимальное решение")}
+              className="bg-white text-primary hover:bg-gray-100 font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
               <Icon name="MessageCircle" className="mr-2" size={20} />
               Получить консультацию
             </Button>
@@ -230,6 +252,13 @@ const Services = () => {
           </div>
         </div>
       </section>
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        title={modalConfig.title}
+        description={modalConfig.description}
+        defaultService={modalConfig.defaultService}
+      />
     </div>
   );
 };

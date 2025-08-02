@@ -1,11 +1,29 @@
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import { Link } from 'react-router-dom';
+import ContactModal from '@/components/ContactModal';
 
 const Index = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalConfig, setModalConfig] = useState({
+    title: "Обсудить проект",
+    description: "Расскажите о вашем проекте и мы свяжемся с вами в течение часа",
+    defaultService: ""
+  });
+
+  const openContactModal = (title?: string, description?: string, service?: string) => {
+    setModalConfig({
+      title: title || "Обсудить проект",
+      description: description || "Расскажите о вашем проекте и мы свяжемся с вами в течение часа",
+      defaultService: service || ""
+    });
+    setIsContactModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -24,7 +42,10 @@ const Index = () => {
             <a href="#portfolio" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Портфолио</a>
             <a href="#contact" className="font-open-sans text-gray-600 hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button className="bg-primary hover:bg-primary/90 text-white font-montserrat">
+          <Button 
+            onClick={() => openContactModal("Заказать сайт", "Расскажите о ваших требованиях к сайту")}
+            className="bg-primary hover:bg-primary/90 text-white font-montserrat"
+          >
             Заказать сайт
           </Button>
         </div>
@@ -45,7 +66,11 @@ const Index = () => {
             От лендингов до сложных SPA
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              onClick={() => openContactModal()}
+              className="bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg px-8 py-4"
+            >
               <Icon name="Rocket" className="mr-2" size={20} />
               Обсудить проект
             </Button>
@@ -447,7 +472,11 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-16">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-montserrat font-semibold px-8 py-3">
+            <Button 
+              size="lg" 
+              onClick={() => openContactModal("Начать проект", "Давайте обсудим ваш проект и определим план работ")}
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-montserrat font-semibold px-8 py-3"
+            >
               <Icon name="Calendar" className="mr-2" size={20} />
               Начать проект
             </Button>
@@ -507,7 +536,10 @@ const Index = () => {
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
                   />
                 </div>
-                <Button className="w-full bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg py-6">
+                <Button 
+                  onClick={() => openContactModal("Отправить заявку", "Заполните форму и мы свяжемся с вами")}
+                  className="w-full bg-gold hover:bg-gold/90 text-black font-montserrat font-semibold text-lg py-6"
+                >
                   <Icon name="Send" className="mr-2" size={20} />
                   Отправить заявку
                 </Button>
@@ -565,6 +597,14 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        title={modalConfig.title}
+        description={modalConfig.description}
+        defaultService={modalConfig.defaultService}
+      />
     </div>
   );
 };

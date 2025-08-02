@@ -1,9 +1,27 @@
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import ContactModal from '@/components/ContactModal';
 
 const About = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalConfig, setModalConfig] = useState({
+    title: "Обсудить проект",
+    description: "Расскажите о вашем проекте и мы свяжемся с вами в течение часа",
+    defaultService: ""
+  });
+
+  const openContactModal = (title?: string, description?: string, service?: string) => {
+    setModalConfig({
+      title: title || "Обсудить проект",
+      description: description || "Расскажите о вашем проекте и мы свяжемся с вами в течение часа",
+      defaultService: service || ""
+    });
+    setIsContactModalOpen(true);
+  };
+
   const team = [
     {
       name: 'Алексей Петров',
@@ -293,7 +311,10 @@ const About = () => {
             Давайте создадим что-то удивительное вместе. Обсудим ваш проект уже сегодня!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-primary hover:bg-gray-100 font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <Button 
+              onClick={() => openContactModal("Связаться с нами", "Давайте обсудим ваш проект и создадим что-то удивительное вместе!")}
+              className="bg-white text-primary hover:bg-gray-100 font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
               <Icon name="MessageCircle" className="mr-2" size={20} />
               Связаться с нами
             </Button>
@@ -306,6 +327,13 @@ const About = () => {
           </div>
         </div>
       </section>
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        title={modalConfig.title}
+        description={modalConfig.description}
+        defaultService={modalConfig.defaultService}
+      />
     </div>
   );
 };
