@@ -242,175 +242,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-4">
-              Тарифы и цены
-            </h2>
-            <p className="text-xl opacity-90 font-open-sans max-w-3xl mx-auto">
-              Честные цены на качественную разработку. Выберите тариф под ваши задачи.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Basic Plan */}
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/15 transition-all duration-300">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Icon name="Globe" className="text-white" size={32} />
-                </div>
-                <CardTitle className="text-2xl font-montserrat font-bold">Лендинг</CardTitle>
-                <CardDescription className="text-white/80 font-open-sans">
-                  Одностраничный сайт с современным дизайном
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-montserrat font-bold">₽25,000</span>
-                  <span className="text-white/60 font-open-sans ml-2">за проект</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Responsive дизайн</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Анимации и переходы</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Формы с валидацией</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">SEO оптимизация</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-accent flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Срок: 7 дней</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-accent hover:bg-accent/80 text-white font-montserrat font-semibold mt-6">
-                  Выбрать тариф
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Pro Plan */}
-            <Card className="bg-gradient-to-br from-primary to-secondary text-white border-2 border-gold relative overflow-hidden transform hover:scale-105 transition-all duration-300">
-              <div className="absolute top-0 right-0 bg-gold text-gray-900 px-4 py-2 text-sm font-montserrat font-bold">
-                Популярный
-              </div>
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Icon name="Star" className="text-gold" size={32} />
-                </div>
-                <CardTitle className="text-2xl font-montserrat font-bold">Многостраничный</CardTitle>
-                <CardDescription className="text-white/90 font-open-sans">
-                  Сайт с несколькими разделами
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-montserrat font-bold">₽45,000</span>
-                  <span className="text-white/80 font-open-sans ml-2">за проект</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">5-10 страниц/разделов</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">React Router навигация</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Компонентная архитектура</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">State management</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">API интеграции</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Срок: 14 дней</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-gold hover:bg-gold/80 text-gray-900 font-montserrat font-semibold mt-6">
-                  Выбрать тариф
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Enterprise Plan */}
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/15 transition-all duration-300">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-gold to-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Icon name="Crown" className="text-white" size={32} />
-                </div>
-                <CardTitle className="text-2xl font-montserrat font-bold">Веб-приложение</CardTitle>
-                <CardDescription className="text-white/80 font-open-sans">
-                  Полнофункциональная SPA
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-montserrat font-bold">₽85,000</span>
-                  <span className="text-white/60 font-open-sans ml-2">за проект</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Complex UI/UX</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">База данных (Backend)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Аутентификация</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Real-time функции</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Тестирование</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="Check" className="text-gold flex-shrink-0" size={20} />
-                    <span className="font-open-sans">Срок: 21 день</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-gold hover:bg-gold/80 text-gray-900 font-montserrat font-semibold mt-6">
-                  Выбрать тариф
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-white/80 font-open-sans mb-4">
-              Особые требования к проекту? Мы создадим индивидуальное решение.
-            </p>
-            <Button variant="outline" className="border-white/30 text-gold hover:bg-white/10 hover:text-gold font-montserrat font-semibold">
-              <Icon name="Phone" className="mr-2" size={20} />
-              Получить консультацию
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
@@ -533,7 +364,7 @@ const Index = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-montserrat font-bold mb-4 text-gray-900">
@@ -548,10 +379,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Icon name="MessageCircle" className="text-white" size={32} />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">1</span>
                 </div>
               </div>
@@ -565,10 +396,10 @@ const Index = () => {
 
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-secondary to-accent rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Icon name="Palette" className="text-white" size={32} />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">2</span>
                 </div>
               </div>
@@ -582,10 +413,10 @@ const Index = () => {
 
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-accent to-gold rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Icon name="Code" className="text-white" size={32} />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">3</span>
                 </div>
               </div>
@@ -599,10 +430,10 @@ const Index = () => {
 
             <div className="text-center group">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-gold to-primary rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Icon name="Rocket" className="text-white" size={32} />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">4</span>
                 </div>
               </div>
@@ -616,7 +447,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-16">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-montserrat font-semibold px-8 py-3">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-montserrat font-semibold px-8 py-3">
               <Icon name="Calendar" className="mr-2" size={20} />
               Начать проект
             </Button>
