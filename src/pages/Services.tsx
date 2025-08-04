@@ -210,7 +210,13 @@ const Services = () => {
                     ))}
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-gray-100">
+                  <div className="mt-6 pt-6 border-t border-gray-100 space-y-3">
+                    <Link to={`/services/${service.id}`} className="block">
+                      <Button className="w-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
+                        Подробнее
+                        <Icon name="Eye" className="ml-2" size={18} />
+                      </Button>
+                    </Link>
                     <Button 
                       onClick={() => openContactModal(`Заказать ${service.title}`, `Обсудим ваш проект по созданию ${service.title.toLowerCase()}`, service.id)}
                       className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-montserrat font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105"
