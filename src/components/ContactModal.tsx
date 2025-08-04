@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -222,7 +223,11 @@ const ContactModal = ({
                 </div>
 
                 <p className="text-xs text-gray-500 font-open-sans text-center">
-                  Нажимая кнопку "Отправить заявку", вы соглашаетесь с обработкой персональных данных
+                  Нажимая кнопку "Отправить заявку", вы соглашаетесь с{' '}
+                  <Link to="/privacy" className="text-primary hover:underline">
+                    политикой конфиденциальности
+                  </Link>
+                  {' '}и обработкой персональных данных
                 </p>
               </form>
             )}
